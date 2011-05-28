@@ -6,7 +6,6 @@
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
 <head>
   <meta charset="utf-8">
-
   <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
        Remove this if you use the .htaccess -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -15,6 +14,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
+
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -22,13 +22,17 @@
   <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-
+  <!-- The 1140px Grid - http://cssgrid.net/ -->
+  <link rel="stylesheet" href="css/1140.css" type="text/css" media="screen" />
+  
   <!-- 1140px Grid styles for IE -->
   <!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
-  <!-- The 1140px Grid - http://cssgrid.net/ -->
-  <link rel="stylesheet" href="css/1140.css" type="text/css" media="screen" />	
+  
+  <!-- Blueprint IE compatibility served for legacy versions of IE -->
+  <!--[if lt IE 8]><link rel="stylesheet" href="css/stylesheets/ie.css" type="text/css" media="screen, projection"><![endif]-->
+  
   <!-- CSS: implied media="all" -->
-  <link rel="stylesheet" href="css/style.css?v=2">
+  <link rel="stylesheet" href="css/stylesheets/style.css?v=2">
 
   <!-- Uncomment if you are specifically targeting less enabled mobile browsers
   <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
@@ -38,13 +42,14 @@
   <script src="js/libs/modernizr-1.7.min.js"></script>
 
 	<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
-	<script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+  <script type="text/javascript" src="js/css3-mediaqueries.js"></script>
 
 </head>
 <body>
 
 <header class="container">
 	<div class="row">
+	    <h1 class="quiet">Peter Zhang</h1> 
 		<div class="onecol">
 			<p>One</p>
 		</div>
@@ -308,3 +313,4 @@
 
 </body>
 </html>
+

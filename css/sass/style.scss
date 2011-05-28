@@ -1,0 +1,36 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "partials/reset";
+@import "partials/general";
+@import "partials/base"; 
+
+
+
+/**
+ * Primary styles
+ *
+ * Author: Peter Zhang
+ */
+
+
+body {
+	
+	@include fancy-type;
+	
+}
+
+	.container p {
+	color: #fff;
+	line-height: 100px;
+	background: #000;
+	text-align: center;
+	margin: 20px 0 0 0;
+	}
+
+
+
+@import "partials/helpers";
+@import "partials/responsive";
