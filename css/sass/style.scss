@@ -3,12 +3,6 @@
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
-@import "partials/reset";
-@import "partials/general";
-@import "partials/base"; 
-
-
-
 /**
  * Primary styles
  *
@@ -16,19 +10,68 @@
  */
 
 
-body {
-	
+@import "partials/reset";
+@import "partials/general";
+@import "partials/base"; 
+@import "partials/type";
+
+@import "sprites/bg"; 
+@import "sprites/icons"; 
+
+
+
+$content-color: #e9e9e9; 
+$font-fallback: "Helvetica Neue", Arial, Helvetica, sans-serif;
+@mixin center { margin: { left:auto; right:auto;}  }
+
+
+body {	
 	@include fancy-type;
-	
+	background:url('../../img/tile_bg/body.png');	
+	&, h1, h2, h3, h4, h5, h6 { color: $content-color; }
 }
 
-	.container p {
-	color: #fff;
-	line-height: 100px;
-	background: #000;
-	text-align: center;
-	margin: 20px 0 0 0;
-	}
+header { 
+    background: url('../../img/tile_bg/header.png') repeat-x;
+    height:132px;
+    position:fixed;
+    top:0;
+    width:100%;
+    #logo { margin-top:42px; float:left;}
+    #dialog {   
+        float: left;
+        margin-left: 10px;
+        margin-top: 13px;
+        padding-top: 20px;
+        text-align: center;
+        font-size:13px;
+        font-family: 'Special Elite', $font-fallback;        
+    }
+    nav {
+        font: {
+            family: "Lucida Sans", $font-fallback; 
+            size: 1.3em;
+        }
+        ul { float:right; 
+            li { 
+                float:left; height:132px; width: (505px/4); text-align:center;
+                &:hover { color: #fefefe; cursor:pointer; }
+            }
+        }
+    }
+    
+}
+section { min-height:550px; background:url('../../img/tile_bg/h-line.png') repeat-x bottom;}
+       
+#home { margin-top:132px; }
+
+footer { min-height:550px; background: url('../../img/tile_bg/footer.png'); 
+    
+}
+
+
+
+
 
 
 

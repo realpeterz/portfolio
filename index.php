@@ -10,7 +10,7 @@
        Remove this if you use the .htaccess -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title></title>
+  <title>Austin Web Deveoler/UX designer - Peter Zhang</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -26,245 +26,60 @@
   <link rel="stylesheet" href="css/1140.css" type="text/css" media="screen" />
   
   <!-- 1140px Grid styles for IE -->
-  <!--[if lte IE 9]><link rel="stylesheet" href="css/ie.css" type="text/css" media="screen" /><![endif]-->
+  <!--[if lte IE 9]><link rel="stylesheet" href="css/1140_ie.css" type="text/css" media="screen" /><![endif]-->
+  
+  <!-- CSS: implied media="all" -->
+  <link rel="stylesheet" href="css/css/style.css?v=2">
+  <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
   
   <!-- Blueprint IE compatibility served for legacy versions of IE -->
   <!--[if lt IE 8]><link rel="stylesheet" href="css/stylesheets/ie.css" type="text/css" media="screen, projection"><![endif]-->
-  
-  <!-- CSS: implied media="all" -->
-  <link rel="stylesheet" href="css/stylesheets/style.css?v=2">
-
-  <!-- Uncomment if you are specifically targeting less enabled mobile browsers
-  <link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
 
   <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
 
   <script src="js/libs/modernizr-1.7.min.js"></script>
 
 	<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
-  <script type="text/javascript" src="js/css3-mediaqueries.js"></script>
+  <script type="text/javascript" src="js/libs/css3-mediaqueries.js"></script>
 
 </head>
 <body>
 
-<header class="container">
-	<div class="row">
-	    <h1 class="quiet">Peter Zhang</h1> 
-		<div class="onecol">
-			<p>One</p>
-		</div>
-		<div class="onecol">
-			<p>One</p>
-		</div>
-		<div class="onecol">
-			<p>One</p>
-		</div>
-		<div class="onecol">
-			<p>One</p>
-		</div>
-		<div class="onecol">
-			<p>One</p>
-		</div>
-		<div class="onecol">
-			<p>One</p>
-		</div>
-		<div class="onecol">
-			<p>One</p>
-		</div>
-		<div class="onecol">
-			<p>One</p>
-		</div>
-		<div class="onecol">
-			<p>One</p>
-		</div>
-		<div class="onecol">
-			<p>One</p>
-		</div>
-		<div class="onecol">
-			<p>One</p>
-		</div>
-		<div class="onecol last">
-			<p>One</p>
-		</div>
-	</div>
-</header>
+    <header class="container">
+          <div class="row">
+            <div class="sixcol">
+                <h1 id="logo" class="ir sprite-logo">Peter Zhang :: Austin Web Developer/UX designer</h1>
+                <div class="sprite-dialog" id="dialog">Howdy!</div>
+            </div>
+            <nav class="sixcol last">
+                <ul id="nav">
+                  <li><div class="sprite-home"></div>Home</li>
+                  <li><div class="sprite-portfolio"></div>Portfolio</li>
+                  <li><div class="sprite-resume"></div>Resume</li>
+                  <li><div class="sprite-contact"></div>Contact</li>
+                </ul>
+            </nav>
+          </div>
+    </header>
+	  
+	 <div id="content">
+	   <section class="anchor" id="home">
+	        <div class="sprite-ribbon">Web developer/UX designer</div> 
+	   </section>
+	   <section class="anchor" id="portfolio">
+	        <div class="sprite-ribbon">Portfolio</div>
+	   </section>
+	   <section class="anchor" id="resume">
+	        <div class="sprite-ribbon">Resume</div>
+	   </section>
+	 </div>
 
-<section class="container">
-	<div class="row">
-		<div class="twocol">
-			<p>Two columns</p>
-		</div>
-		<div class="twocol">
-			<p>Two columns</p>
-		</div>
-		<div class="twocol">
-			<p>Two columns</p>
-		</div>
-		<div class="twocol">
-			<p>Two columns</p>
-		</div>
-		<div class="twocol">
-			<p>Two columns</p>
-		</div>
-		<div class="twocol last">
-			<p>Two columns</p>
-		</div>
-	</div>
-</section>
+	 
+	 <footer class="anchor" id="contact">
+	   <div id="footer-wrap" class="row"></div>
+	 </footer>
 
-<div class="container">
-	<div class="row">
-		<div class="threecol">
-			<p>Three columns</p>
-		</div>
-		<div class="threecol">
-			<p>Three columns</p>
-		</div>
-		<div class="threecol">
-			<p>Three columns</p>
-		</div>
-		<div class="threecol last">
-			<p>Three columns</p>
-		</div>
-	</div>
-</div>
-
-<div class="container">
-	<div class="row">
-		<div class="fourcol">
-			<p>Four columns</p>
-		</div>
-		<div class="fourcol">
-			<p>Four columns</p>
-		</div>
-		<div class="fourcol last">
-			<p>Four columns</p>
-		</div>
-	</div>
-</div>
-
-<div class="container">
-	<div class="row">
-		<div class="onecol">
-			<p>One</p>
-		</div>
-		<div class="elevencol last">
-			<p>Eleven columns</p>
-		</div>
-	</div>
-</div>
-
-<div class="container">
-	<div class="row">
-		<div class="twocol">
-			<p>Two columns</p>
-		</div>
-		<div class="tencol last">
-			<p>Ten columns</p>
-		</div>
-	</div>
-</div>
-
-<div class="container">
-	<div class="row">
-		<div class="threecol">
-			<p>Three columns</p>
-		</div>
-		<div class="ninecol last">
-			<p>Nine columns</p>
-		</div>
-	</div>
-</div>
-
-<div class="container">
-	<div class="row">
-		<div class="fourcol">
-			<p>Four columns</p>
-		</div>
-		<div class="eightcol last">
-			<p>Eight columns</p>
-		</div>
-	</div>
-</div>
-
-<div class="container">
-	<div class="row">
-		<div class="fivecol">
-			<p>Five columns</p>
-		</div>
-		<div class="sevencol last">
-			<p>Seven columns</p>
-		</div>
-	</div>
-</div>
-
-<div class="container">
-	<div class="row">
-		<div class="sixcol">
-			<p>Six columns</p>
-		</div>
-		<div class="sixcol last">
-			<p>Six columns</p>
-		</div>
-	</div>
-</div>
-
-<div class="container">
-	<div class="row">
-		<div class="sevencol">
-			<p>Seven columns</p>
-		</div>
-		<div class="fivecol last">
-			<p>Five columns</p>
-		</div>
-	</div>
-</div>
-
-<div class="container">
-	<div class="row">
-		<div class="eightcol">
-			<p>Eight columns</p>
-		</div>
-		<div class="fourcol last">
-			<p>Four columns</p>
-		</div>
-	</div>
-</div>
-
-<div class="container">
-	<div class="row">
-		<div class="ninecol">
-			<p>Nine columns</p>
-		</div>
-		<div class="threecol last">
-			<p>Three columns</p>
-		</div>
-	</div>
-</div>
-
-<div class="container">
-	<div class="row">
-		<div class="tencol">
-			<p>Ten columns</p>
-		</div>
-		<div class="twocol last">
-			<p>Two columns</p>
-		</div>
-	</div>
-</div>
-
-<div class="container">
-	<div class="row">
-		<div class="elevencol">
-			<p>Eleven columns</p>
-		</div>
-		<div class="onecol last">
-			<p>One</p>
-		</div>
-	</div>
-</div>
-
-<footer class="container">
+<!-- <footer class="container">
 	<div class="row">
 		<div class="threecol">
 			<p>Three columns</p>
@@ -276,7 +91,7 @@
 			<p>Three columns</p>
 		</div>
 	</div>
-</footer>
+</footer> -->
 
 
 </body>
@@ -287,8 +102,8 @@
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
-  <script>window.jQuery || document.write("<script src='js/libs/jquery-1.5.1.min.js'>\x3C/script>")</script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write("<script src='js/libs/jquery.min.js'>\x3C/script>")</script>
 
 
   <!-- scripts concatenated and minified via ant build script-->
