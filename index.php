@@ -62,22 +62,38 @@
           </div>
     </header>
 	  
-	 <div id="content">
-	   <section class="anchor" id="home">
-	        <div class="sprite-ribbon">Web developer/UX designer</div> 
+	 <div id="content" class="container">
+	   <section class="anchor row" id="home">       
+	       <div class="sprite-ribbon"><h2>Web developer / UX designer</h2></div>
+	       <div class="twocol home-content"></div>
+	       <article class="eightcol home-content">I am a Web developer based in Austin, Texas. I am originally from Beijing, 
+and went to graduate school at University of Texas at Austin. I hold a 
+Master of Science degree in Information Studies.</article>
+           <div class="twocol home-content last"></div>
 	   </section>
-	   <section class="anchor" id="portfolio">
-	        <div class="sprite-ribbon">Portfolio</div>
+	   <section class="anchor row" id="portfolio">
+	        <div class="sprite-ribbon"><h2>Portfolio</h2></div>
 	   </section>
 	   <section class="anchor" id="resume">
-	        <div class="sprite-ribbon">Resume</div>
+	        <div class="sprite-ribbon"><h2>Resume</h2></div>
 	   </section>
 	 </div>
-
-	 
-	 <footer class="anchor" id="contact">
-	   <div id="footer-wrap" class="row"></div>
-	 </footer>
+     <section id="contact">
+	     <div class="separator"></div>
+         <footer class="anchor container">
+           <div class="row">
+                <div class="sixcol">
+                    <h2>Get in Touch</h2>
+                    <img src="http://placehold.it/547x276" alt="Placeholder image from flickholdr.com" />
+                </div>
+                <div class="sixcol last">
+                    <h2>Send a Message Now!</h2>
+                    <img src="http://placehold.it/547x416" alt="Placeholder image from flickholdr.com" />
+                     <img src="http://placehold.it/547x57" alt="my button" />
+                </div>
+           </div>
+         </footer>
+	 </section>
 
 <!-- <footer class="container">
 	<div class="row">

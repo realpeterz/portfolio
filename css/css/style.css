@@ -601,7 +601,7 @@ caption {
 /* line 9, ../sass/sprites/_bg.scss */
 .sprite-ribbon {
   background-position: 0 -316px;
-  width: 1127px;
+  width: 1122px;
   height: 77px;
   margin-left: auto;
   margin-right: auto;
@@ -734,7 +734,12 @@ caption {
   height: 74px;
 }
 
-/* line 28, ../sass/style.scss */
+/* line 31, ../sass/style.scss */
+.row {
+  width: 1140px;
+}
+
+/* line 33, ../sass/style.scss */
 body {
   background: url("../../img/tile_bg/body.png");
 }
@@ -776,25 +781,33 @@ body .alt {
   font-style: italic;
   font-weight: normal;
 }
-/* line 31, ../sass/style.scss */
+/* line 36, ../sass/style.scss */
 body, body h1, body h2, body h3, body h4, body h5, body h6 {
   color: #e9e9e9;
 }
+/* line 37, ../sass/style.scss */
+body h2 {
+  font-size: 1.5em;
+}
 
-/* line 34, ../sass/style.scss */
+/* line 42, ../sass/style.scss */
 header {
   background: url("../../img/tile_bg/header.png") repeat-x;
   height: 132px;
   position: fixed;
   top: 0;
+  left: -20px;
   width: 100%;
+  overflow: auto;
+  overflow-y: hidden;
+  -ms-overflow-y: hidden;
 }
-/* line 40, ../sass/style.scss */
+/* line 52, ../sass/style.scss */
 header #logo {
   margin-top: 42px;
   float: left;
 }
-/* line 41, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 header #dialog {
   float: left;
   margin-left: 10px;
@@ -804,42 +817,65 @@ header #dialog {
   font-size: 13px;
   font-family: "Special Elite", "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
-/* line 50, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 header nav {
   font-family: "Lucida Sans", "Helvetica Neue", Arial, Helvetica, sans-serif;
   font-size: 1.3em;
 }
-/* line 55, ../sass/style.scss */
+/* line 67, ../sass/style.scss */
 header nav ul {
   float: right;
 }
-/* line 56, ../sass/style.scss */
+/* line 68, ../sass/style.scss */
 header nav ul li {
   float: left;
   height: 132px;
   width: 126.25px;
   text-align: center;
 }
-/* line 58, ../sass/style.scss */
+/* line 70, ../sass/style.scss */
 header nav ul li:hover {
   color: #fefefe;
   cursor: pointer;
 }
 
-/* line 64, ../sass/style.scss */
-section {
+/* line 79, ../sass/style.scss */
+#content .sprite-ribbon {
+  text-align: center;
+  overflow: hidden;
+}
+/* line 80, ../sass/style.scss */
+#content .sprite-ribbon h2 {
+  margin-top: 15px;
+}
+/* line 82, ../sass/style.scss */
+#content section {
   min-height: 550px;
-  background: url("../../img/tile_bg/h-line.png") repeat-x bottom;
+  padding-top: 142px;
+  margin-bottom: 500px;
+  border-bottom: 1px dotted #e0e0e0;
 }
 
-/* line 66, ../sass/style.scss */
-#home {
-  margin-top: 132px;
+/* line 87, ../sass/style.scss */
+#home article {
+  margin-top: 1.5em;
 }
 
-/* line 68, ../sass/style.scss */
-footer {
-  min-height: 550px;
+/* line 90, ../sass/style.scss */
+.separator {
+  background: url("../../img/tile_bg/h-line.png") repeat-x;
+  height: 3px;
+  width: 100%;
+}
+
+/* line 93, ../sass/style.scss */
+#contact {
+  padding-top: 142px;
+}
+/* line 95, ../sass/style.scss */
+#contact footer {
+  padding: 1.3em 0;
+  min-height: 655px;
   background: url("../../img/tile_bg/footer.png");
 }
 
