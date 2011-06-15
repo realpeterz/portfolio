@@ -1,3 +1,5 @@
+// navigation icon sprites and social icon sprites
+
 .sprite-contact-hover, .sprite-contact, .sprite-delicious, .sprite-email, .sprite-google, .sprite-home-hover, .sprite-home, .sprite-linkedin, .sprite-phone, .sprite-portfolio-hover, .sprite-portfolio, .sprite-resume-hover, .sprite-resume, .sprite-twitter 
 {  background: url('../../img/icon/icon-sprites.png') no-repeat top left; } 
 
@@ -17,4 +19,29 @@
 .sprite-resume-hover{ background-position: 0 -546px; width: 29px; height: 21px; @include centered(37px); } 
 .sprite-resume{ background-position: 0 -572px; width: 29px; height: 21px; @include centered(37px); } 
 .sprite-twitter{ background-position: 0 -598px; width: 74px; height: 74px; } 
+
+
+// browser icon sprites
+
+.sprite-chrome, .sprite-firefox, .sprite-safari, .sprite-opera, .sprite-ie { background:url('../../img/browser-sprites.png') no-repeat top left; }
+
+@mixin browsersprite( $x, $y:0 ) { background-position:$x $y; }
+
+.sprite-chrome { @include browsersprite(-6px); }
+.sprite-firefox { @include browsersprite(-70px); }
+.sprite-opera { @include browsersprite(-134px); }
+.sprite-safari { @include browsersprite(-200px); }
+.sprite-ie { @include browsersprite(-264px, -4px); }
+
+
+// portfolio view icons
+.sprite-gallery-view, .sprite-grid-view, .sprite-list-view {
+   background: url('../../img/view_icons/view-sprites-decolored.png') no-repeat top left;
+}
+.view-active { background: url('../../img/view_icons/view-sprites.png') no-repeat top left;  }
+.sprite-gallery-view{ background-position: 0 0; width: 24px; height: 24px; } 
+.sprite-grid-view{ background-position: -25.5px 0; width: 24px; height: 24px; } 
+.sprite-list-view{ background-position: -51px 0; width: 24px; height: 24px; } 
+
+     
 

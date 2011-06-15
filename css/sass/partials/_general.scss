@@ -87,9 +87,12 @@ button {  width: auto; overflow: visible; }
  * You might tweak these..
  */
 
+p + p { text-indent:0 !important; }
+
 body, select, input, textarea {
   /* #444 looks better than black: twitter.com/H_FJ/statuses/11800719859 */
   color: #444;
+  
   /* Set your base font here, to apply evenly */
   /* font-family: Georgia, serif;  */
 }

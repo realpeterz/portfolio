@@ -4,6 +4,50 @@
  * These follow after primary styles so they will successfully override.
  */
 
+/* Smaller screens */
+
+@media only screen and (max-width: 1139px) {
+        
+ 
+    header nav { margin-left:-220px; }
+    #dialog { display:none !important; }
+
+}
+
+
+@media only screen and (max-width: 1023px) {
+
+    header nav { padding-left:0; margin-left:0; }
+	#nav { float:left; padding-left:0;}
+	.logo { display:none; }
+	
+	
+}
+
+/* ============================= */
+/* ! Layout for mobile version   */
+/* ============================= */
+
+@media handheld, only screen and (max-width: 767px) {
+    
+    
+    header { overflow: hidden; 
+        .logo { display:none; }
+	    nav ul { float: left; }
+
+    }
+    
+}
+
+/* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
+   consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-device-width: 480px) {
+        
+  /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
+  /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
+}
+
+
 @media all and (orientation:portrait) {
   /* Style adjustments for portrait mode goes here */
 
@@ -14,27 +58,6 @@
 
 }
 
-
-/* ============================= */
-/* ! Layout for mobile version   */
-/* ============================= */
-
-@media handheld, only screen and (max-width: 767px) {
-
-	body {
-
-	}
-
-}
-
-/* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
-   consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
-@media screen and (max-device-width: 480px) {
-
-
-  /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
-  /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
-}
 
 
 /**
