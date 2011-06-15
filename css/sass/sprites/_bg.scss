@@ -1,4 +1,4 @@
-.sprite-bt-send, .sprite-dialog, .sprite-glow, .sprite-logo, .sprite-ribbon  {
+.sprite-bt-send, .sprite-dialog, .sprite-glow, .sprite-logo {
    background: url('../../img/bg/bg-sprites.png') no-repeat top left;
 }
 
@@ -6,7 +6,8 @@
 .sprite-dialog{ background-position: 0 -57px; width: 123px; height: 58px; } 
 .sprite-glow{ background-position:  -17px -125px; /* width: 161px; height: 134px;*/ } 
 .sprite-logo{ background-position: 0 -264px; width: 361px; height: 47px; } 
-.sprite-ribbon{ background-position: 0 -316px; width: 1122px; height: 77px; margin-left:auto; margin-right: auto;} 
+
+.sprite-ribbon{ background: url('../../img/bg/ribbon_short.png') center 0 no-repeat; min-height:70px; } 
 
 
 
