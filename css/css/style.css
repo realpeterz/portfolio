@@ -1086,24 +1086,146 @@ header nav ul li:hover {
   overflow: hidden;
   display: none;
 }
+/* line 166, ../sass/style.scss */
+#grid-view .thumb-wrap {
+  overflow: hidden;
+  position: relative;
+}
 /* line 167, ../sass/style.scss */
+#grid-view .magnifier, #grid-view .external-link {
+  position: absolute;
+  width: 125px;
+  display: block;
+  height: 202px;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  top: 0;
+  display: none;
+}
+/* line 168, ../sass/style.scss */
+#grid-view .external-link {
+  right: 0;
+  background: #111111 url("../../img/icon/link.png") no-repeat center;
+}
+/* line 169, ../sass/style.scss */
+#grid-view .magnifier {
+  left: 0;
+  background: #111111 url("../../img/icon/magnifier.png") no-repeat center;
+}
+/* line 170, ../sass/style.scss */
+#grid-view .external-link:active, #grid-view .external-link:visited, #grid-view .magnifier:active, #grid-view .magnifier:visited {
+  color: transparent;
+}
+/* line 171, ../sass/style.scss */
+#grid-view .external-link:hover, #grid-view .magnifier:hover {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=70);
+  opacity: 0.7;
+}
+/* line 172, ../sass/style.scss */
 #grid-view .thumb {
-  border: 2px solid #fff;
+  border: 1px solid #D8D8D8;
   margin-bottom: 0.5em;
 }
 
-/* line 173, ../sass/style.scss */
+/* line 177, ../sass/style.scss */
+#list-view {
+  overflow: hidden;
+  display: none;
+}
+/* line 178, ../sass/style.scss */
+#list-view ul {
+  padding-left: 0;
+  margin: 0;
+}
+/* line 179, ../sass/style.scss */
+#list-view ul li {
+  list-style: none;
+  background: #222;
+  background: rgba(10, 10, 10, 0.3);
+  padding: 2em;
+  margin-bottom: 1em;
+  overflow: hidden;
+  border: 1px solid #363636;
+  -moz-transition-property: background;
+  -webkit-transition-property: background;
+  -o-transition-property: background;
+  transition-property: background;
+  -moz-transition-duration: 0.5s;
+  -webkit-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -moz-transition-timing-function: ease-in-out;
+  -webkit-transition-timing-function: ease-in-out;
+  -o-transition-timing-function: ease-in-out;
+  transition-timing-function: ease-in-out;
+}
+/* line 181, ../sass/style.scss */
+#list-view ul li:hover {
+  background: #2a2a2a;
+  background: rgba(10, 10, 10, 0.1);
+}
+/* line 184, ../sass/style.scss */
+#list-view .thumb {
+  float: left;
+}
+/* line 185, ../sass/style.scss */
+#list-view .fancybox-alt {
+  display: block;
+  overflow: hidden;
+  float: left;
+  width: 200px;
+}
+/* line 187, ../sass/style.scss */
+#list-view .fancybox-alt:hover, #list-view .fancybox-alt:visited, #list-view .fancybox-alt:active {
+  color: transparent;
+}
+/* line 189, ../sass/style.scss */
+#list-view .list-content {
+  width: 75%;
+  float: right;
+}
+/* line 190, ../sass/style.scss */
+#list-view .list-content h2 {
+  color: #ACDE3F;
+  line-height: 100%;
+  margin-bottom: 0.5em;
+}
+/* line 191, ../sass/style.scss */
+#list-view .list-content .technology {
+  margin-bottom: 1em;
+  font-size: 80%;
+  font-style: italic;
+  color: #fefefe;
+}
+/* line 192, ../sass/style.scss */
+#list-view .list-content .description {
+  margin-top: 0;
+}
+/* line 193, ../sass/style.scss */
+#list-view .list-content .livesite {
+  color: #0099ff;
+  text-decoration: none;
+  float: right;
+}
+/* line 194, ../sass/style.scss */
+#list-view .list-content .livesite:hover {
+  color: #15D9EA;
+}
+
+/* line 205, ../sass/style.scss */
 .separator {
   background: url("../../img/tile_bg/h-line.png") repeat-x;
   height: 3px;
   min-width: 1280px;
 }
 
-/* line 176, ../sass/style.scss */
+/* line 208, ../sass/style.scss */
 #contact {
   padding-top: 165px;
 }
-/* line 179, ../sass/style.scss */
+/* line 211, ../sass/style.scss */
 #contact footer {
   padding: 1.3em 0;
   min-height: 655px;

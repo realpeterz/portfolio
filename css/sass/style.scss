@@ -161,11 +161,43 @@ header {
               }
         }
 
-        // list-view
+        // grid-view
         #grid-view { overflow:hidden; display:none; 
-        
-            .thumb { border:2px solid #fff; margin-bottom:0.5em; }
+            .thumb-wrap { overflow:hidden; position:relative; }
+            .magnifier, .external-link { position: absolute; width:125px; display:block; height:202px; @include opacity(0.5); top: 0; display:none;}
+            .external-link { right: 0; background:#111 url('../../img/icon/link.png') no-repeat center;}
+            .magnifier { left: 0; background:#111 url('../../img/icon/magnifier.png') no-repeat center;}
+            .external-link:active, .external-link:visited, .magnifier:active, .magnifier:visited { color:transparent; }
+            .external-link:hover, .magnifier:hover { @include opacity(0.7); }
+            .thumb { border:1px solid #D8D8D8; margin-bottom:0.5em; }
+            
         }
+        
+        // list-view
+        #list-view { overflow:hidden; display:none;
+            ul { padding-left:0; margin:0;  
+                li { list-style:none; background:#222; background:rgba(10,10,10,0.3); padding:2em; margin-bottom:1em; overflow:hidden; border:1px solid #363636; @include transition(background, 0.5s, ease-in-out);
+                
+                    &:hover { background:#2a2a2a; background:rgba(10,10,10,0.1); }
+                }
+            }
+            .thumb { float:left; }
+            .fancybox-alt { display:block; overflow:hidden; float:left; width:200px;
+            
+                &:hover, &:visited, &:active { color:transparent; }
+            }
+            .list-content { width:75%; float:right;
+                h2 { color:#ACDE3F; line-height: 100%; margin-bottom:0.5em;}
+                .technology { margin-bottom:1em; font-size:80%; font-style:italic; color:#fefefe;}
+                .description { margin-top:0;  }
+                .livesite { color:#0099ff; text-decoration:none;  float:right;
+                    &:hover { color:#15D9EA;}       
+                 }
+                
+            }
+        }
+        
+        
         
     
 // footer

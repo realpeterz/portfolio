@@ -19,110 +19,54 @@
     
     <div id="showcases" class="clear">
     
-            <div id="gallery" class="clear">
-            
-                <?php
-                
+        <div id="gallery" class="clear">
+                <?php              
                     require_once('mylibs/parse_image.php');
-
-                    $img = new Image();
-                    
-                    $obj_array = Image::get_images_data("./js/images.json");
-                    
+                    $obj_array = Image::get_images_data("./js/images.json");                   
+                    $img = new Image();                    
                     foreach($obj_array as $i):
-                        //$img->init_thumb($i->thumbFile, $i->title)->display();
-                        $img->init_thumb_with_fancybox($i)->display();
-                        
-                    endforeach;
-                    
-                    
-                
-                ?>
-            
-<!--         <?php
-    
-    
-  
-      
-    $thumb_dir = 'img/thumbshots';
-    $orig_dir = 'img/original';
-    $stage_width = 1140;
-    $stage_height = 400;
-    $img_width = 200;
-    
-    $allowed_types = array('jpg', 'jpeg', 'gif', 'png');
-    $file_parts = array();
-    $ext = '';
-    $title = '';
-    $i = 0;
-    
-    $dir_handle = @opendir($thumb_dir) or die('Something with the image directory!');
-    $i = 1;
-    
-    while ($file = readdir($dir_handle)):
-
-       if($file == "." || $file == "..") continue;
-       
-       $file_parts = explode('.', $file);
-       $ext = strtolower(array_pop($file_parts));
-       
-       $title = implode('.', $file_parts);
-       $title = htmlspecialchars($title);
-       
-       if (in_array($ext, $allowed_types)):
-           $left = rand(40, $stage_width-230);
-           $top = rand(0, $stage_height-230);
-           $rotate = rand(-40, 40);
-       endif;
-       
-       
-           
-  ?>     
-        <image id="pic-<?php echo $i++; ?>" class="pic"
-            src="<?php echo $thumb_dir.'/'.$file; ?>"
-            style="
-                width: <?php echo $img_width; ?>px;
-                top:<?php echo $top;?>px;
-                left:<?php echo $left;?>px;
-                -moz-transform:rotate(<?php echo $rotate;?>deg); 
-                -webkit-transform:rotate(<?php echo $rotate;?>deg);
-                -o-transform:rotate(<?php echo $rotate;?>deg);
-                -ms-transform:rotate(<?php echo $rotate;?>deg)
-                transform:rotate(<?php echo $rotate;?>deg);"
-            title="<?php echo $title;?>"
-        
-        />
-        
-  <?php         
-  
-    endwhile;
-    
-    closedir($dir_handle);
-       
-   ?> -->
-            
+                        $img->init_rand_thumb_with_fancybox($i)->display();
+                    endforeach;             
+                ?>         
         </div> <!-- end of gallery -->
-    
-    <!--  div#list-view>div.threecol*8>img[src="http://placehold.it/249x200"].thumb -->
            
         <div id="grid-view">
-            <div class="threecol"><img src="http://placehold.it/249x200" alt="" class="thumb" /></div>
-            <div class="threecol"><img src="http://placehold.it/249x200" alt="" class="thumb" /></div>
-            <div class="threecol"><img src="http://placehold.it/249x200" alt="" class="thumb" /></div>
-            <div class="threecol last"><img src="http://placehold.it/249x200" alt="" class="thumb" /></div>
-            <div class="threecol"><img src="http://placehold.it/249x200" alt="" class="thumb" /></div>
-            <div class="threecol"><img src="http://placehold.it/249x200" alt="" class="thumb" /></div>
-            <div class="threecol"><img src="http://placehold.it/249x200" alt="" class="thumb" /></div>
-            <div class="threecol last"><img src="http://placehold.it/249x200" alt="" class="thumb" /></div>
+            
+            <?php
+                $config['thumb_width'] = 249;
+                $img = new Image($config);        
+                foreach($obj_array as $index => $m):
+                    $img->init_thumb($m);
+            ?>
+                   <div class="thumb-wrap threecol <?php if ( ($index+1)%4 === 0 ) echo 'last'?>">
+                        <a class="magnifier ir" href="<?php echo $img->orig_src; ?>" title="<?php echo $img->title; ?>">See a bigger screenshot</a>
+                            <?php $img->display(); ?>
+                        <a class="external-link ir" href="<?php echo $m->url; ?>" target="_blank" title="live site"></a>
+                   </div>
+            
+            <?php endforeach;  ?>
         </div>
         
-
-        
+        <div id="list-view">
+            <ul>
+            <?php 
+                $config['thumb_width'] = 200; 
+                $img = new Image($config);            
+                foreach($obj_array as $index => $m):
+                    $img->init_thumb($m); 
+            ?>
+                <li class="list-item clear">
+                    <a class="fancybox-alt" title="<?php echo $m->title; ?>" href="<?php echo $img->orig_src; ?>"><?php $img->display(); ?></a>
+                    <div class="list-content">
+                        <h2><?php echo $img->title;  ?></h2>
+                        <p class="technology"><? echo $m->technology; ?></p>
+                        <p class="description"><? echo $m->description; ?></p>
+                        <a href="<?php echo $m->url; ?>" class="livesite" target="_blank">Live Site</a>
+                    </div>
+                </li>
+            <?php endforeach; ?>  
+            </ul>      
+        </div>
     </div> <!-- end of showcases -->
     
-   
-    
-
-    
-
 </section>

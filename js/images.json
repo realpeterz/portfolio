@@ -1,45 +1,61 @@
 [
     {
+        "id": "0",
         "thumbFile": "adrules.jpg",
         "originalFile": "adrules.jpg",
         "title": "Advertising rules application",
-        "url": "http://www.shipleyassociates.com/labs/ad_rules/"    
+        "url": "http://www.shipleyassociates.com/labs/ad_rules/",
+        "description": "The American Bar Association(ABA) has 5 model rules covering advertising for attorneys but each of the 50 states has its own exceptions for each of the rules. This application helps any attorney who wishes to advertise in a particular state get a grip on those complications.",
+        "technology": "HTML, CSS, PHP, MySQL, JQuery, Regular Expressions(data extracting)"
     },
     {
+        "id": "1",
         "thumbFile": "martiniapparel.jpg",
         "originalFile": "martiniapparel.jpg",
         "title": "Martini Apparel inventory and display system",
-        "url": "http://www.martiniapparel.com/" 
+        "url": "http://www.martiniapparel.com/",
+        "description": "Martini Apparel is a New York based clothing wholesale merchant that has been around for over a decade. They had the need to manage their inventory more efficiently and also to make their official Website more presentable to potential clients. This application met their needs with a custom CMS built from scratch and a decent front-end design to replace their mid-90 looking old site.",
+        "technology": "HTML, CSS, Codeigniter(PHP), MySQL, jQuery" 
     },
     {
         "thumbFile": "shipley.jpg",
         "originalFile": "shipley.jpg",
         "title": "Shipley and Associates Inc. company Website redesign",
-        "url": "http://www.shipleyassociates.com/" 
+        "url": "http://www.shipleyassociates.com/",
+        "description": "",
+        "technology": "" 
     },
     {
         "thumbFile": "nagoya.jpg",
         "originalFile": "sushicarryout.jpg",
         "title": "Nagoya Japanese restaurant online ordering system",
-        "url": "http://sushicarryout.com/" 
+        "url": "http://sushicarryout.com/",
+        "description": "",
+        "technology": "" 
     },
     {
         "thumbFile": "ischool.jpg",
         "originalFile": "ischool.jpg",
         "title": "UT Austin - School of Information official Website redesign",
-        "url": "http://ischool.site50.net/" 
+        "url": "http://ischool.site50.net/",
+        "description": "",
+        "technology": "" 
     },
     {
         "thumbFile": "pollapp.jpg",
         "originalFile": "pollapp.jpg",
         "title": "Harris Media digital poll application",
-        "url": "http://www.harrismediadigitalpolls.com/wp/" 
+        "url": "http://www.harrismediadigitalpolls.com/wp/",
+        "description": "",
+        "technology": "" 
     },
     {
         "thumbFile": "saveourinternetcafes.jpg",
         "originalFile": "saveourinternetcafes.jpg",
         "title": "Email campaign application for saving Internet cafes in florida",
-        "url": "http://www.saveourinternetcafes.com/" 
+        "url": "http://www.saveourinternetcafes.com/",
+        "description": "",
+        "technology": "" 
         
     }
 ]

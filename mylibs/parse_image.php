@@ -60,18 +60,18 @@
                     return $style;
                 }
                 
-                public function init_thumb($file_name, $title)
+                public function init_thumb($obj)
                 {
-                    $style = $this->_rand_style();
-                    $this->thumb_src = $this->thumb_dir.'/'.$file_name;
-                    $this->title = $title;
+                    $this->thumb_src = $this->thumb_dir.'/'.$obj->thumbFile;
+                    $this->orig_src =$this->orig_dir.'/'.$obj->originalFile;
+                    $this->title = $obj->title;
                     $thumb = phpQuery::newDocumentHTML("<img src='$this->thumb_src' alt='$this->title' title='$this->title' />");
-                    $this->img_html = $thumb['img']->attr('style', $style)->addClass('pic');
+                    $this->html = $thumb['img']->attr('style','width:'.$this->thumb_width.'px;')->addClass('thumb');
                     
                     return $this;
                 }
                 
-                public function init_thumb_with_fancybox( $obj )
+                public function init_rand_thumb_with_fancybox( $obj )
                 {
                     $style = $this->_rand_style();
                     $this->thumb_src = $this->thumb_dir.'/'.$obj->thumbFile;

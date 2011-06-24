@@ -32,7 +32,7 @@
   <link rel="stylesheet" href="css/css/style.css?v=2">
   <link rel="stylesheet" href="css/jquery-ui.css" />
   <!-- <link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.13/themes/ui-darkness/jquery-ui.css" type="text/css" /> -->
-  <link rel="stylesheet" href="css/fancybox/jquery.fancybox-1.2.6.css" type="text/css"/>
+  <link rel="stylesheet" href="css/fancybox/jquery.fancybox-1.3.4.css" type="text/css"/>
   
   
   <!-- Blueprint IE compatibility served for legacy versions of IE -->
