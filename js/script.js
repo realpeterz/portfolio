@@ -137,12 +137,38 @@ window.App = {
         this.enableFancybox();
         this.bindSlidingEffect();
         if (!location.hash) { $('nav li:first').trigger('click'); } 
+        this.checkBrowser();
     },
     
     mydata: {
     
             dialog: ["Howdy!", "Take a look!", "Interested?", "Let's talk!"],
             scrollTo: ["#home", "#portfolio", "#resume", "#contact"]
+    },
+    
+    checkBrowser: function(){
+    
+        switch(this.userBrowser.browser){
+            case "Chrome":
+                $('.browser').css("background-position", "-6px center");
+                break;
+            case "Firefox":
+                $('.browser').css("background-position", "-78px center");
+                break;
+            case "Opera":
+                $('.browser').css("background-position", "-146px center");
+                break;
+            case "Safari":
+                $('.browser').css("background-position", "-208px center");
+                break;
+            case "Explorer":
+                $('.browser').css("background-position", "-284px -2px");
+                break;
+            default:
+                $('#browser-detect').removeClass('browser').addClass('browser-generic');
+                break;
+        }
+          
     },
     
     speak: function(){

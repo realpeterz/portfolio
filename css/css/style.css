@@ -1005,6 +1005,7 @@ header nav ul li:hover {
   overflow: hidden;
   background: #121212;
   padding: 0.7em;
+  width: 172px;
   -moz-box-shadow: inset 0px 0px 5px 3px black;
   -webkit-box-shadow: inset 0px 0px 5px 3px black;
   -o-box-shadow: inset 0px 0px 5px 3px black;
@@ -1046,6 +1047,11 @@ header nav ul li:hover {
 }
 
 /* line 143, ../sass/style.scss */
+.browser {
+  background: url("../../img/browser_icons/browser-sprites.png") no-repeat;
+}
+
+/* line 144, ../sass/style.scss */
 .browser-generic {
   background: url("../../img/browser_icons/browser.png") no-repeat;
 }
@@ -1214,18 +1220,86 @@ header nav ul li:hover {
   color: #15D9EA;
 }
 
+/* line 202, ../sass/style.scss */
+#resume-wrap {
+  margin-top: 2em;
+  color: #C3C3C7;
+}
+/* line 203, ../sass/style.scss */
+#resume-wrap h2 {
+  color: #ACDE3F;
+  margin-bottom: 0.3em;
+}
+/* line 204, ../sass/style.scss */
+#resume-wrap ul {
+  padding-left: 0;
+  clear: both;
+}
 /* line 205, ../sass/style.scss */
+#resume-wrap li {
+  list-style: none;
+}
+/* line 206, ../sass/style.scss */
+#resume-wrap .timeline-head, #resume-wrap .time {
+  display: block;
+  margin-bottom: 0.3em;
+  color: #E3F5C4;
+  font-weight: bold;
+}
+/* line 207, ../sass/style.scss */
+#resume-wrap .timeline-head {
+  width: 75%;
+  float: left;
+  font-size: 1.2em;
+}
+/* line 208, ../sass/style.scss */
+#resume-wrap .time {
+  width: 25%;
+  float: right;
+  font-size: 0.8em;
+  text-align: right;
+  line-height: 2.5em;
+}
+/* line 209, ../sass/style.scss */
+#resume-wrap .timeline {
+  margin-bottom: 1em;
+}
+/* line 210, ../sass/style.scss */
+#resume-wrap .detail-title {
+  color: #fff;
+  font-style: italic;
+}
+/* line 211, ../sass/style.scss */
+#resume-wrap .detail-subitem {
+  list-style: disc;
+  margin-left: 1em;
+}
+/* line 213, ../sass/style.scss */
+#resume-wrap #education {
+  border-bottom: 1px solid #111;
+  -moz-box-shadow: 0 1px 0 0 #444444;
+  -webkit-box-shadow: 0 1px 0 0 #444444;
+  -o-box-shadow: 0 1px 0 0 #444444;
+  box-shadow: 0 1px 0 0 #444444;
+  margin-bottom: 1.5em;
+}
+/* line 219, ../sass/style.scss */
+#resume-wrap #skills .timeline-head {
+  float: none;
+}
+
+/* line 228, ../sass/style.scss */
 .separator {
   background: url("../../img/tile_bg/h-line.png") repeat-x;
   height: 3px;
   min-width: 1280px;
 }
 
-/* line 208, ../sass/style.scss */
+/* line 231, ../sass/style.scss */
 #contact {
   padding-top: 165px;
 }
-/* line 211, ../sass/style.scss */
+/* line 234, ../sass/style.scss */
 #contact footer {
   padding: 1.3em 0;
   min-height: 655px;

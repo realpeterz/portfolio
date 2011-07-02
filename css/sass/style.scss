@@ -128,7 +128,7 @@ header {
     }
     // dropin control 
     #dropin { margin:2.5em 0 0 41.5%; }
-        #dropin-bt { display: inline-block; overflow:hidden; background:#121212; padding:0.7em;
+        #dropin-bt { display: inline-block; overflow:hidden; background:#121212; padding:0.7em; width:172px;
             @include single-box-shadow(#000, 0px, 0px, 5px, 3px, inset); behavior:url('../PIE.htc');
             &.hoverdrop { @include single-box-shadow(#B2CCD2, 0px, 0px, 5px, 5px); behavior:url('../PIE.htc'); }
             
@@ -140,8 +140,8 @@ header {
                 p { margin:0; vertical-align:middle; line-height:1.5em; font-size:0.8em; }
             }
             #browser-detect { @include dimension(64px, 64px); }
-            .browser-generic { background:url('../../img/browser_icons/browser.png') no-repeat; }
-    
+            .browser { background:url('../../img/browser_icons/browser-sprites.png') no-repeat; }
+            .browser-generic { background:url('../../img/browser_icons/browser.png') no-repeat;  }
     
     // three views for showcases
     
@@ -197,7 +197,30 @@ header {
             }
         }
         
-        
+// resume
+
+    #resume-wrap{ margin-top:2em; color:#C3C3C7;
+        h2 { color:#ACDE3F; margin-bottom:0.3em;}
+        ul { padding-left:0; clear:both;}
+        li { list-style:none; }
+        .timeline-head, .time { display:block; margin-bottom:0.3em; color:#E3F5C4; font-weight:bold; }
+        .timeline-head { width:75%; float:left; font-size:1.2em; } 
+        .time { width:25%; float:right; font-size:0.8em; text-align:right; line-height:2.5em; }
+        .timeline { margin-bottom:1em; }
+        .detail-title {  color:#fff; font-style:italic; }
+        .detail-subitem { list-style:disc; margin-left:1em; }
+        #work {  }
+        #education { 
+            border-bottom:1px solid #111; 
+            @include single-box-shadow(#444, 0, 1px, 0, 0); 
+            margin-bottom:1.5em;       
+         }
+        #skills { 
+            .timeline-head { float:none; } 
+               
+        }
+    
+    }        
         
     
 // footer

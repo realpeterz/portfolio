@@ -11,7 +11,7 @@
         <div id="dropin" title="Drop in here to open live site">
                 <div id="dropin-bt">
                     <div id="dropin-ins"><p>DROP TO OPEN</p><p>LIVE SITE</p></div>
-                    <div id="browser-detect" class="browser-generic"></div>
+                    <div id="browser-detect" class="browser"></div>
                 </div>
         </div>
     </div>
@@ -59,8 +59,8 @@
                     <a class="fancybox-alt" title="<?php echo $m->title; ?>" href="<?php echo $img->orig_src; ?>"><?php $img->display(); ?></a>
                     <div class="list-content">
                         <h2><?php echo $img->title;  ?></h2>
-                        <p class="technology"><? echo $m->technology; ?></p>
-                        <p class="description"><? echo $m->description; ?></p>
+                        <p class="technology"><?php echo $m->technology; ?></p>
+                        <p class="description"><?php echo $m->description; ?></p>
                         <a href="<?php echo $m->url; ?>" class="livesite" target="_blank">Live Site</a>
                     </div>
                 </li>
