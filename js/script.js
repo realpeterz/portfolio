@@ -256,9 +256,11 @@ window.App = {
            }); // end of custom binding for scroll-navigation synch
            
              
-          $(window).scroll(function(){    
-            $(this).triggerHandler( 'perScrollNavSynch' );   
-          });
+          $(window).scroll(  $.throttle(300, function(){
+                     
+                    $(this).triggerHandler( 'perScrollNavSynch' );   
+                })  
+          );
     },
     
     bindViewSwitchOnClick: function(){
@@ -357,7 +359,7 @@ window.App = {
         $("a.fancybox, a.magnifier").fancybox({
 		    'speedIn'		:	400, 
 		    'speedOut'		:	100, 
-		    'overlayShow'	:	true,
+		    'overlayShow'	:	false,
 		    'titlePosition': 'over',
 		    'hideOnOverlayClick': false,
 		    'onStart': function(){
@@ -435,7 +437,7 @@ window.App = {
 	    $("a.fancybox-alt").fancybox({
 	        'speedIn'		:	400, 
 		    'speedOut'		:	100, 
-		    'overlayShow'	:	true,
+		    'overlayShow'	:	false,
 		    'hideOnOverlayClick': false
 	    });
 	    
@@ -453,6 +455,6 @@ jQuery(function( $ ) {
     
    App.init();
    
-   console.log(App.userBrowser.browser, App.userBrowser.version);
+   //console.log(App.userBrowser.browser, App.userBrowser.version);
 
 });

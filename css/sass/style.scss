@@ -127,11 +127,12 @@ header {
     
     }
     // dropin control 
-    #dropin { margin:2.5em 0 0 41.5%; }
-        #dropin-bt { display: inline-block; overflow:hidden; background:#121212; padding:0.7em; width:172px;
-            @include single-box-shadow(#000, 0px, 0px, 5px, 3px, inset); behavior:url('../PIE.htc');
-            &.hoverdrop { @include single-box-shadow(#B2CCD2, 0px, 0px, 5px, 5px); behavior:url('../PIE.htc'); }
-            
+    #dropin { margin:2.5em 0 0 41%; padding-bottom:10px;}
+    
+        #dropin-bt { display: block; overflow:hidden; background:#121212; padding:0.7em; width:176px; 
+            @include single-box-shadow(#000, 0px, 0px, 5px, 3px, inset); 
+            .boxshadow &.hoverdrop { @include single-box-shadow(#B2CCD2, 0px, 0px, 5px, 5px); }
+            &.hoverdrop { border: 2px solid #B2CCD2; }
         }
         
     
@@ -156,7 +157,6 @@ header {
                         position:absolute;
                         border: 2px solid #333;
                         @include single-box-shadow(#333, 2px, 2px, 3px);
-                        behavior:url('../PIE.htc');
                     }
               }
         }
@@ -230,13 +230,38 @@ header {
        
 #contact {  
     padding-top: $offset-top; 
-    
+    h2 { font-size:2em; }
     footer { 
         padding:1.3em 0;
         min-height:655px; background: url('../../img/tile_bg/footer.png');
         
     } 
+    .contact-info { margin-bottom: 1em;
+            span { display:inline-block; font-size:1.3em; vertical-align:middle; }
+            .info { margin-left: 1.5em; }
+            .email-addr a { color:#fff; text-decoration:none; &:hover { color:#0099ff; text-decoration:underline; } }
+     }
+    #social { list-style-type:none; padding:2em 0 0 0; margin:0; 
+        li { overflow:hidden; display:inline-block; margin-right: 1.5em;}
+        a { display:block; } 
+    }
     
+    .copyright { text-align: center; margin-top:100px; font-size:0.8em; }
+    
+    #email-form {
+        font-size:1.3em;
+        input { width:98.5%; }
+        textarea { width:98.5%; }
+        input, textarea {  background:#D7D7D7; border:1px solid #e4e4e4; 
+            .boxshadow &:focus { background:#fff; @include single-box-shadow(#e4e4e4, 0, 0, 2px, 2px); border-color:#333;} 
+            .no-boxshadow &:focus { background:#fff; }
+        }
+        input { height:2.5em; margin-bottom: 0.5em; padding:2px; }
+        textarea { height:10em; margin-bottom: 0.5em; padding:2px; }
+        button{ width: 100%; height:55px; background:url('../../img/tile_bg/bt-send.png') repeat-x; padding:0; border:1px solid #374819;  color: #D1D1D7; 
+            &:hover { background:url('../../img/tile_bg/bt-send-hover.png') repeat-x; }
+        }
+    }
 }
 
 
