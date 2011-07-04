@@ -136,6 +136,7 @@ window.App = {
         this.bringPicToFrontOnClick();
         this.enableFancybox();
         this.bindSlidingEffect();
+        this.socialIconFisheye();
         if (!location.hash) { $('nav li:first').trigger('click'); } 
         this.checkBrowser();
     },
@@ -441,11 +442,29 @@ window.App = {
 		    'hideOnOverlayClick': false
 	    });
 	    
-	    /*$(".fancybox-alt").click(function(){
-	       return false; 
-	    });*/
 	    
-    } 
+    },
+    
+    socialIconFisheye: function(){
+        $("#social li a").transform({
+            scale:[0.9, 0.9]
+        }); 
+        
+        $("#social li a").hover(function(){
+            $(this).animate({ scale:[[1,1]], rotate: '-45deg' });
+        }, function(){
+            $(this).animate({ scale:[[0.9,0.9]], rotate: '0deg' }, 200, "easeOutQuad" );
+        }); 
+    },
+    
+    validateEmailForm: function(){
+           
+    },
+    
+    ajaxSendMail: function(){
+        
+    }
+     
     
       
 };
