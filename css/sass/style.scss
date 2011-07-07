@@ -153,6 +153,7 @@ header {
            a { text-indent: -999px; display:block; 
                 &, .pic { overflow:hidden; }  
                 .pic {  
+                
                         position:absolute;
                         border: 1px solid #ddd;
                         @include single-box-shadow(#333, 2px, 2px, 3px);
