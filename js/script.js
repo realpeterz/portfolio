@@ -130,15 +130,28 @@ window.App = {
     init: function(){
         this.userBrowser = BrowserDetect.init();
         this.bindNavOnClick();
-        this.bindPerScroll();
-        this.bindViewSwitchOnClick();
-        this.dragNdrop();
-        this.bringPicToFrontOnClick();
-        this.enableFancybox();
-        this.bindSlidingEffect();
+        
+        if (!jQuery.browser.mobile) {
+            this.bindPerScroll();
+            this.bindViewSwitchOnClick();
+            this.dragNdrop();
+            this.bringPicToFrontOnClick();
+            this.enableFancybox();
+            this.bindSlidingEffect();
+        } 
+             
         this.socialIconFisheye();
-        if (!location.hash) { $('nav li:first').trigger('click'); } 
         this.checkBrowser();
+        this.setErrorMessages();    
+        this.ajaxSendMail();
+        this.bindValidate();
+        
+        if (!jQuery.browser.mobile) {
+            if (!location.hash) { $('nav li:first').trigger('click'); }        
+            $("#logo").click(function(){ window.location.hash = "home"; });
+        }
+        
+        $('input, textarea').placeholder();
     },
     
     mydata: {
@@ -446,23 +459,181 @@ window.App = {
     },
     
     socialIconFisheye: function(){
-        $("#social li a").transform({
+        $("#social li").transform({
             scale:[0.9, 0.9]
         }); 
         
-        $("#social li a").hover(function(){
+        $("#social li").hover(function(){
             $(this).animate({ scale:[[1,1]], rotate: '-45deg' });
         }, function(){
             $(this).animate({ scale:[[0.9,0.9]], rotate: '0deg' }, 200, "easeOutQuad" );
         }); 
     },
     
-    validateEmailForm: function(){
-           
+    setErrorMessages: function(){
+        var errorStyle = { fontStyle: "italic", color: "#FA4A4A", fontSize: "16px" },      
+            
+       $errorName = $("<div/>", { 
+            id: "error-name",
+            text: "* Must be a legit human name without special characters",
+            css: errorStyle     
+        }),
+        
+        $errorEmail = $("<div/>", { 
+            id: "error-email",
+            text: "* Must be a valid email address",
+            css: errorStyle
+        }),
+        
+        $errorMessage = $("<div/>", { 
+            id: "error-message",
+            text: "* Message should be at least 15 characters",
+            css: errorStyle 
+        });
+        
+        this.$errorEmpty = $("<div/>", { // make it accessible from the App object scope
+            "class": "error-empty",
+            text: "* Must NOT be empty",
+            css: errorStyle 
+        });
+            
+        
+        $("#name").data("error", $errorName);
+        $("#email").data("error", $errorEmail);
+        $("#message").data("error", $errorMessage); 
+    },
+    
+    validateEmailHandler: function(){
+        var regexName = /^([a-zA-Z]+(?:\.)?(?: [a-zA-Z]+(?:\.)?)*)$/,
+            
+            regexEmail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+(?:[a-z]{2}|com|org|net|edu|gov|mil|biz|info|mobi|name|aero|asia|jobs|museum)$/;
+        
+        var field = this.id, // 'this' is DOM element #name, #email or #message to be validated 
+                $this = $(this),
+                value = $.trim( $this.val() ),
+                valid;
+                    
+            switch(field){
+                case "name":
+                    valid = regexName.test( value );
+                    break;
+                case "email":
+                    valid = regexEmail.test( value );
+                    break;
+                case "message":
+                    valid = ( value.length >= 15 );    
+            }
+            
+            if ( value === "" ) { 
+                
+                $this.data("valid", false);
+                
+                if ( $this.data('error').length  ) 
+                { 
+                    $this.data('error').remove(); 
+                }        
+                
+                if ( !$this.prev(".error-empty").length )
+                {
+                    $this.before( App.$errorEmpty.clone() ); 
+                }
+                return;
+            }
+            else { 
+                if ( $this.prev(".error-empty").length )
+                { 
+                    $this.prev(".error-empty").remove(); 
+                }
+            }
+            
+            if ( !valid ) { 
+                $this.data("valid", false);
+                $this.before( $this.data('error') ); 
+                return; 
+            }
+            else { 
+                 $this.data("valid", true);
+                 $this.data('error').remove();
+             }
+        
+            
+              
+    },
+    
+    bindValidate: function(){
+          $("#name, #email, #message").keyup( $.debounce(300, App.validateEmailHandler ) );
+          $("#name, #email, #message").blur(App.validateEmailHandler);   
     },
     
     ajaxSendMail: function(){
-        
+        $('#email-form button').click(function(e){
+           
+            e.preventDefault();
+           
+            $("#name, #email, #message").each(App.validateEmailHandler);
+            
+            if ( $("#name").data("valid") && $("#email").data("valid") && $("#message").data("valid") )
+            {   
+                   
+                   $("#name, #email, #message").each(function(){
+                        $(this).val( $.trim( $(this).val() ) );
+                   });
+                    
+                   var serializedData = $("#email-form").serialize(); 
+                    $.ajax({
+                                type: 'POST',
+                                url: "mylibs/sendmail.php",
+                                data: serializedData,
+                                beforeSend: function(){
+                                        var spinner = $('<img></img>', {
+                                                    id: 'spinner',
+                                                    src: "img/spinner.gif",
+                                                    alt: 'Sending, please wait!',
+                                                    css: {  margin: "25% 0 0 40%" }
+                                                });
+                                                
+                                        $("#email-form").fadeOut("fast", function(){
+                                             spinner.insertBefore("#email-form");
+                                        });
+                                       
+                                },
+                                complete: function(){
+                                                        $('img#spinner').remove();
+                                                        $("#email-form").fadeIn();
+                                                        $("#email-headline").fadeIn();
+                                                        $(":input, textarea", "#email-form").val('');
+                                                        $('input, textarea').placeholder();
+                                },
+                                success: function(json){
+                                    var $sign = $("<img/>", {
+                                        src: "img/icon/success.png",
+                                        css: { display: "inline", marginRight: "5px" }
+                                    });
+                                    
+                                    var resp = $.parseJSON(json);
+                                    
+                                    if ( resp.yep )
+                                    {  
+                                       $("#email-headline").fadeOut(function(){
+                                            $(this).html(resp.yep).prepend($sign); 
+                                       }); 
+                                       
+                                    }
+                                    
+                                    else if ( resp.nope )
+                                    { 
+                                        $sign.attr("src", "img/icon/error.png");
+                                        $("#email-headline").fadeOut("fast", function(){
+                                            $(this).html(resp.nope).prepend($sign);
+                                        }); 
+                                        
+                                  
+                                    }
+                                } // end of success callback
+                    }); // end of Ajax
+            
+            }
+        }); 
     }
      
     
@@ -474,6 +645,12 @@ jQuery(function( $ ) {
     
    App.init();
    
-   //console.log(App.userBrowser.browser, App.userBrowser.version);
+   
+   
+   if( isiPad = navigator.userAgent.match(/iPad/i) != null ) {
+        $(".sprite-list-view").click();
+        document.getElementById('view-switch').style.display = "none";
+        document.getElementById('dropin-bt').style.display = "none";
+    }
 
 });

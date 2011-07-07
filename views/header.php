@@ -11,12 +11,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
   <title>Austin Web Deveoler/UX designer - Peter Zhang</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
-
-
+  <meta name="author" content="Peter Zhang">
+  <meta name="description" content="Austin Web Developer/UX designer :: Peter Zhang" />
+  <meta name="keywords" content="Web development, web design, UX design, HTML, CSS, JavaScript, jQuery, PHP, MySQl, CMS, E-Commerce" />
+  
   <!-- Mobile viewport optimized: j.mp/bplateviewport -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name = "viewport" content = "initial-scale=0.5, maximum-scale=0.5, width=device-width">
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=0.8"> -->
 
   <!-- Place favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
   <link rel="shortcut icon" href="/favicon.ico">
@@ -44,6 +47,21 @@
 
 	<!--css3-mediaqueries-js - http://code.google.com/p/css3-mediaqueries-js/ - Enables media queries in some unsupported browsers-->
   <script type="text/javascript" src="js/libs/css3-mediaqueries.js"></script>
+  
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-23916281-1']);
+    _gaq.push(['_setDomainName', '.peterzhang.us']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
 
 </head>
 <body>

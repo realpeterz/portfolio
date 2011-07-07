@@ -20,15 +20,28 @@
     header nav { padding-left:0; margin-left:0; }
 	#nav { float:left; padding-left:0;}
 	.logo { display:none; }
+	.row .sixcol { width:96%; margin-left:1em; margin-rigt:1em;}
+	 #controls, #gallery, #grid-view { display:none; }
+    #list-view { display: block; margin-top:2em; }
+    .container, .row { width:1023px; }
+    .separator, .container { min-width:1023px; }
+    footer { position:relative; }
+    #social { position:absolute; top: 3em; right: 1em;}
+    
+    footer .last { margin-top:2em; }
+   // #list-view .list-content { width:65%; }
 	
 	
 }
 
 /* ============================= */
-/* ! Layout for mobile version   */
+/* ! Layout for mobile version 
+                                 */
 /* ============================= */
 
-@media handheld, only screen and (max-width: 767px) {
+@media handheld, only screen and (max-width: 768px) {
+    
+    
     
     
     header { overflow: hidden; 
@@ -37,6 +50,38 @@
 
     }
     
+    #home figure img {
+      display: inline-block;
+      float: left;
+      margin: 0 auto;
+      width: 80px;
+    }
+    
+    #home figure figcaption {
+      display: inline-block;
+      margin-left: 1em;
+      margin-top: 1.5em;
+      text-align: center;
+      vertical-align: middle;
+    }
+    
+    #home figure {
+      display: inline-block;
+      float: left;
+      margin-top: 1.5em;
+      min-width: 50%;
+    }
+    
+    
+    #controls, #gallery, #grid-view { display:none; }
+    #list-view { display: block; margin-top:2em; }
+    .container, .row { width:743px; }
+    .separator, .container { min-width:743px; }
+    #list-view .list-content { width:65%; }
+    footer .last { display:none; }
+    #contact #social li { margin-right:0.5em; }
+    
+    
 }
 
 /* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
@@ -44,7 +89,9 @@
 @media screen and (max-device-width: 480px) {
         
   /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
-  /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
+   html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } 
+   footer .last { display:none; }
+   .row { width:100%; }
 }
 
 

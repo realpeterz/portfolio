@@ -18,11 +18,11 @@
                 </ul>
             </div>
             <div class="sixcol last">
-                <h2>Send a Message Now!</h2>
+                <h2 id="email-headline">Send a Message Now!</h2>
                 <form action="mylibs/sendmail.php" method="post" id="email-form">
-                    <input type="text" name="name" placeholder="Your Name" />
-                    <input type="email" name="email" placeholder="Your Email Address" />
-                    <textarea name="message" placeholder="Your Message"></textarea>
+                    <input type="text" id="name" name="name" placeholder="Your Name" />
+                    <input type="email" id="email" name="email" placeholder="Your Email Address" />
+                    <textarea name="message" id="message" placeholder="Your Message"></textarea>
                     <button type="submit">Send</button>
                 </form>
             </div>

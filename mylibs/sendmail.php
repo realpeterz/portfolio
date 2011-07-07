@@ -19,11 +19,11 @@
     $mail->MsgHTML($body);    
     
     if( $mail->Send() ) {
-      echo "Thanks. Your message has been sent. I will get back to you as soon as possible.";   
+      echo json_encode( array( "yep" => "Thanks! Your message has been sent. I will get back to you very soon.") );   
                 
     } else {
     
-       echo "Mailer Error: " . $mail->ErrorInfo;
-     // echo "Your message failed being delivered. The mail server might be done. Please try again later."
+       //echo "Mailer Error: " . $mail->ErrorInfo;
+      echo json_encode( array( "nope" => "Sorry, your message failed being delivered. Please try again." ) );
     }
     
