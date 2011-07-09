@@ -23,7 +23,7 @@
 $content-color: #e9e9e9; 
 $font-fallback: "Helvetica Neue", Arial, Helvetica, sans-serif;
 $offset-top: 165px;
-$offset-bottom: 500px;
+$offset-bottom: 200px;
 $sec-title-size: 1.5em;
 $screen-width: 1280px !default;
 
@@ -48,12 +48,11 @@ header {
     height:132px;
     position:fixed;
     top:0;
-    //left:-20px;
     width:100%;
-    //overflow:auto;
-    //overflow-y: hidden;
-    //-ms-overflow-y: hidden;
-    #logo { margin-top:42px; float:left;}
+    #logo { margin-top:42px; float:left;
+    
+        &:hover { cursor: pointer; }
+    }
     #dialog {   
         float: left;
         margin-left: 10px;
@@ -83,7 +82,7 @@ header {
     .sprite-ribbon { text-align:center; overflow:hidden;
         h2 { margin-top: 15px; }
     }
-    section { min-height:550px; padding-top: $offset-top; margin-bottom: $offset-bottom; border-bottom:1px dotted #e0e0e0; }   
+    section { min-height:550px; padding-top: $offset-top; margin-bottom: $offset-bottom; /*border-bottom:1px dotted #e0e0e0;*/ }   
     
 }
 
@@ -127,11 +126,12 @@ header {
     
     }
     // dropin control 
-    #dropin { margin:2.5em 0 0 41.5%; }
-        #dropin-bt { display: inline-block; overflow:hidden; background:#121212; padding:0.7em;
-            @include single-box-shadow(#000, 0px, 0px, 5px, 3px, inset); behavior:url('../PIE.htc');
-            &.hoverdrop { @include single-box-shadow(#B2CCD2, 0px, 0px, 5px, 5px); behavior:url('../PIE.htc'); }
-            
+    #dropin { margin:2.5em 0 0 41%; padding-bottom:10px;}
+    
+        #dropin-bt { display: block; overflow:hidden; background:#121212; padding:0.7em; width:176px; 
+            @include single-box-shadow(#000, 0px, 0px, 5px, 3px, inset); 
+            .boxshadow &.hoverdrop { @include single-box-shadow(#B2CCD2, 0px, 0px, 5px, 5px); }
+            &.hoverdrop { border: 2px solid #B2CCD2; }
         }
         
     
@@ -140,8 +140,8 @@ header {
                 p { margin:0; vertical-align:middle; line-height:1.5em; font-size:0.8em; }
             }
             #browser-detect { @include dimension(64px, 64px); }
-            .browser-generic { background:url('../../img/browser_icons/browser.png') no-repeat; }
-    
+            .browser { background:url('../../img/browser_icons/browser-sprites.png') no-repeat; }
+            .browser-generic { background:url('../../img/browser_icons/browser.png') no-repeat;  }
     
     // three views for showcases
     
@@ -153,19 +153,73 @@ header {
            a { text-indent: -999px; display:block; 
                 &, .pic { overflow:hidden; }  
                 .pic {  
+                
                         position:absolute;
-                        border: 2px solid #333;
+                        border: 1px solid #ddd;
                         @include single-box-shadow(#333, 2px, 2px, 3px);
-                        behavior:url('../PIE.htc');
                     }
               }
         }
 
-        // list-view
+        // grid-view
         #grid-view { overflow:hidden; display:none; 
-        
-            .thumb { border:2px solid #fff; margin-bottom:0.5em; }
+            .thumb-wrap { overflow:hidden; position:relative; }
+            .magnifier, .external-link { position: absolute; width:125px; display:block; height:202px; @include opacity(0.5); top: 0; display:none;}
+            .external-link { right: 0; background:#111 url('../../img/icon/link.png') no-repeat center;}
+            .magnifier { left: 0; background:#111 url('../../img/icon/magnifier.png') no-repeat center;}
+            .external-link:active, .external-link:visited, .magnifier:active, .magnifier:visited { color:transparent; }
+            .external-link:hover, .magnifier:hover { @include opacity(0.7); }
+            .thumb { border:1px solid #D8D8D8; margin-bottom:0.5em; }
+            
         }
+        
+        // list-view
+        #list-view { overflow:hidden; display:none;
+            ul { padding-left:0; margin:0;  
+                li { list-style:none; background:#222; background:rgba(10,10,10,0.3); padding:2em; margin-bottom:1em; overflow:hidden; border:1px solid #363636; @include transition(background, 0.5s, ease-in-out);
+                
+                    &:hover { background:#2a2a2a; background:rgba(10,10,10,0.1); }
+                }
+            }
+            .fancybox-alt { display:block; overflow:hidden; float:left; width:202px;
+            .thumb { float:left; border:1px solid #ddd; }
+                &:hover, &:visited, &:active { color:transparent; }
+            }
+            .list-content { width:75%; float:right;
+                h2 { color:#ACDE3F; line-height: 100%; margin-bottom:0.5em;}
+                .technology { margin-bottom:1em; font-size:80%; font-style:italic; color:#fefefe;}
+                .description { margin-top:0;  }
+                .livesite { color:#0099ff; text-decoration:none;  float:right;
+                    &:hover { color:#15D9EA;}       
+                 }
+                
+            }
+        }
+        
+// resume
+
+    #resume-wrap{ margin-top:2em; color:#C3C3C7;
+        h2 { color:#ACDE3F; margin-bottom:0.3em;}
+        ul { padding-left:0; clear:both;}
+        li { list-style:none; }
+        .timeline-head, .time { display:block; margin-bottom:0.3em; color:#E3F5C4; font-weight:bold; }
+        .timeline-head { width:75%; float:left; font-size:1.2em; } 
+        .time { width:25%; float:right; font-size:0.8em; text-align:right; line-height:2.5em; }
+        .timeline { margin-bottom:1em; }
+        .detail-title {  color:#fff; font-style:italic; }
+        .detail-subitem { list-style:disc; margin-left:1em; }
+        #work {  }
+        #education { 
+            border-bottom:1px solid #111; 
+            @include single-box-shadow(#444, 0, 1px, 0, 0); 
+            margin-bottom:1.5em;       
+         }
+        #skills { 
+            .timeline-head { float:none; } 
+               
+        }
+    
+    }        
         
     
 // footer
@@ -175,13 +229,36 @@ header {
        
 #contact {  
     padding-top: $offset-top; 
-    
+    h2 { font-size:2em; }
     footer { 
-        padding:1.3em 0;
-        min-height:655px; background: url('../../img/tile_bg/footer.png');
+        padding:1.3em 0 0 0;
+        background: url('../../img/tile_bg/footer.png');
         
     } 
+    .contact-info { margin-bottom: 1em;
+            span { display:inline-block; font-size:1.3em; vertical-align:middle; }
+            .info { margin-left: 1.5em; }
+            .email-addr a { color:#fff; text-decoration:none; &:hover { color:#0099ff; text-decoration:underline; } }
+     }
+    #social { list-style-type:none; padding:5em 0 0 0; margin:0; overflow:hidden;
+        li { overflow:hidden; display:inline-block; margin-right: 1.5em; float:left;}
+        a { display:block; } 
+    }
     
+    .copyright { text-align: center; margin-top:50px; }
+    
+    #email-form {
+        font-size:1.3em;
+        input, textarea { width:98.5%; background:#D7D7D7; border:1px solid #e4e4e4; 
+            .boxshadow &:focus { background:#fff; @include single-box-shadow(#e4e4e4, 0, 0, 2px, 2px); border-color:#333;} 
+            .no-boxshadow &:focus { background:#fff; border-width:2px; }
+        }
+        input { height:2em; margin-bottom: 0.5em; padding:2px; }
+        textarea { height:10em; margin-bottom: 0.5em; padding:2px; }
+        button{ width: 100%; height:55px; background:url('../../img/tile_bg/bt-send.png') repeat-x; padding:0; border:2px solid #374819;  color: #D1D1D7; 
+            &:hover { background:url('../../img/tile_bg/bt-send-hover.png') repeat-x; }
+        }
+    }
 }
 
 

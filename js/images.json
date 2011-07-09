@@ -1,45 +1,76 @@
 [
     {
+        "thumbFile": "pollapp.jpg",
+        "originalFile": "pollapp.jpg",
+        "title": "Harris Media digital poll application",
+        "url": "http://www.harrismediadigitalpolls.com/wp/",
+        "description": "This is a poll application for people and business to collect opinions across the Web and major social networks. Each poll can have multiple questions and can be shared through iframes, on twitter or as a Facebook app. The backend is an single-page CMS implemented with heavy AJAX.",
+        "technology": "HTML, CSS, Codeigniter(PHP), MySQL, jQuery" 
+    },
+    
+    {
+        "thumbFile": "nagoya.jpg",
+        "originalFile": "sushicarryout.jpg",
+        "title": "Nagoya Japanese restaurant online ordering system",
+        "url": "http://sushicarryout.com/",
+        "description": "Nagoya is a Japanese restaurant in Arlington, Texas. The restaurant is trying to expand their business by offering more takeout and delivery services. This application is an online ordering system with a back-end CMS built from the gound up. The reusable modules built in this projects are being used to develop an even more customizable online ordering platform meant for just about any restaurant.",
+        "technology": "HTML, CSS, Codeigniter(PHP), MySQL, jQuery" 
+    },
+    
+    {
+        "thumbFile": "shipley.jpg",
+        "originalFile": "shipley.jpg",
+        "title": "Shipley and Associates Inc. company Website redesign",
+        "url": "http://www.shipleyassociates.com/",
+        "description": "Shipley & Associates, Inc. is an Austin-based consulting company that provides law firms and other organizations litigation support, communications, and business intelligence services. This is a complete redesign with a simplistic layout, clean code and more interactive interface to replace the company's mid-90 looking old site. It helps the company make a better Web presence and showcase its strength in the field.",
+        "technology": "HTML, CSS, JQuery, PHP" 
+    },
+    
+    {
+        "thumbFile": "saveourinternetcafes.jpg",
+        "originalFile": "saveourinternetcafes.jpg",
+        "title": "Email campaign application for saving Internet cafes in Florida",
+        "url": "http://www.saveourinternetcafes.com/",
+        "description": "The state of Florida was considering banning Internet cafes and online game promotions. This application was served for an email campaign to help prevent the ban. On the backend, email templates and relavent lawmakers's email addresses can be added and edited. Users who sign up and opt in would send the lawmakers' pre-defined appeals via email automatically.",
+        "technology": "HTML, CSS, Codeigniter(PHP), MySQL, jQuery" 
+        
+    },
+    
+    {
         "thumbFile": "adrules.jpg",
         "originalFile": "adrules.jpg",
         "title": "Advertising rules application",
-        "url": "http://www.shipleyassociates.com/labs/ad_rules/"    
+        "url": "http://www.shipleyassociates.com/labs/ad_rules/",
+        "description": "The American Bar Association(ABA) has 5 model rules covering advertising for attorneys but each of the 50 states has its own exceptions for each of the rules. This application helps any attorney who wishes to advertise in a particular state get a grip on those complications.",
+        "technology": "HTML, CSS, PHP, MySQL, JQuery, Regular Expressions(data extracting)"
     },
     {
         "thumbFile": "martiniapparel.jpg",
         "originalFile": "martiniapparel.jpg",
         "title": "Martini Apparel inventory and display system",
-        "url": "http://www.martiniapparel.com/" 
+        "url": "http://www.martiniapparel.com/",
+        "description": "Martini Apparel is a New York based clothing wholesale merchant that has been around for over a decade. They had the need to manage their inventory more efficiently and also to make their official Website more presentable to potential clients. This application met their needs with a custom CMS built from scratch and a presentable front-end to replace their outdated static Website.",
+        "technology": "HTML, CSS, Codeigniter(PHP), MySQL, jQuery" 
     },
-    {
-        "thumbFile": "shipley.jpg",
-        "originalFile": "shipley.jpg",
-        "title": "Shipley and Associates Inc. company Website redesign",
-        "url": "http://www.shipleyassociates.com/" 
-    },
-    {
-        "thumbFile": "nagoya.jpg",
-        "originalFile": "sushicarryout.jpg",
-        "title": "Nagoya Japanese restaurant online ordering system",
-        "url": "http://sushicarryout.com/" 
-    },
+    
     {
         "thumbFile": "ischool.jpg",
         "originalFile": "ischool.jpg",
         "title": "UT Austin - School of Information official Website redesign",
-        "url": "http://ischool.site50.net/" 
+        "url": "http://ischool.site50.net/",
+        "description": "This was a school project with an attempt to improve the user interface, information architecture, and usability of the current school Webstie at ischool.utexas.edu. The live demo was presented at the school's 2011 Open House technology event and recieved positive reviews.",
+        "technology": "HTML, CSS, PHP, CouchDB, jQuery" 
     },
+
     {
-        "thumbFile": "pollapp.jpg",
-        "originalFile": "pollapp.jpg",
-        "title": "Harris Media digital poll application",
-        "url": "http://www.harrismediadigitalpolls.com/wp/" 
-    },
-    {
-        "thumbFile": "saveourinternetcafes.jpg",
-        "originalFile": "saveourinternetcafes.jpg",
-        "title": "Email campaign application for saving Internet cafes in florida",
-        "url": "http://www.saveourinternetcafes.com/" 
-        
+        "thumbFile": "portfolio.jpg",
+        "originalFile": "portfolio.jpg",
+        "title": "Personal Portfolio",
+        "url": "http://peterzhang.us",
+        "description": "This is my personal portfolio experimenting with HTML5, CSS3, and cross browser compatability with Modernizr and pollyfills. Best practices were excercised, such as semantic tags and classes, AJAX validation on keypress with a throttle, well-factored and namespaced JavaScript with maximum resuability and maintainability, single-page scrolling with hash changes, etc.",
+        "technology": "HTML5, CSS3, Sass, PHP, jQuery" 
     }
+    
+    
+    
 ]

@@ -3,13 +3,13 @@
 
 
 /* TEAM */
-  <your title>: <your name>
-  Site: 
-  Twitter: 
-  Location: 
+  <Web Developer>: <Peter Zhang>
+  Site: peterzhang.us
+  Twitter: @realpeterz
+  Location: Austin, TX
 
 /* THANKS */
-  Names (& URL): 
+  Names (& URL): my family and friends
 
 /* SITE */
   Standards: HTML5, CSS3
