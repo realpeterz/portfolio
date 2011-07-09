@@ -67,7 +67,7 @@
         "originalFile": "portfolio.jpg",
         "title": "Personal Portfolio",
         "url": "http://peterzhang.us",
-        "description": "This is my personal portfolio experimenting with HTML5, CSS3, and cross browser compatability with Modernizr and pollyfills. Best practices were excercised, such as semantic tags and classes, AJAX validation on keypress with a throttle, well-factored and namespaced JavaScript with maximum resuability and maintainability, single-page scrolling with hash changes, etc.",
+        "description": "This is my personal portfolio experimenting with HTML5, CSS3, and cross browser compatability with Modernizr and pollyfills. Best practices were excercised, such as semantic tags and classes, AJAX validation on keypress with a throttle, loosely coupled and namespaced JavaScript with maximum resuability and maintainability, single-page navigation with hash changes, etc.",
         "technology": "HTML5, CSS3, Sass, PHP, jQuery" 
     }
     

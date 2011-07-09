@@ -99,8 +99,8 @@
                         <li class="timeline"><p class="timeline-head">Database</p> MySQL, SQLite, CouchDB</li>
                         <li class="timeline"><p class="timeline-head">Frameworks & Libraries</p> Codeigniter, Ruby on Rails(learning), jQuery, Backbone.js, 960 Grid System, Blueprint(CSS), Compass(Sass)</li>
                         <li class="timeline"><p class="timeline-head">Version Control</p> Git, Subversion </li>
-                        <li class="timeline"><p class="timeline-head">Wireframing</p>Photoshop, GIMP, Balsamiq, OmniGraffle, Visio, Google Drawings</li>
-                        <li class="timeline"><p class="timeline-head">Usability</p> Camstudio, WebEx</li>
+                        <li class="timeline"><p class="timeline-head">Wireframing & Mockups</p>Photoshop, GIMP, Balsamiq, OmniGraffle, Visio, Google Drawings</li>
+                        <li class="timeline"><p class="timeline-head">Usability Testting</p> Camstudio, WebEx</li>
                         <li class="timeline"><p class="timeline-head">Operating Systems</p> Linux, Mac OS X, Windows</li>
                     </ul>
                 </div>
